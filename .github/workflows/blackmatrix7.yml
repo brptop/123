@@ -6,8 +6,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-blackmatrix7-
-ios_rule_script
+    types: sync-blackmatrix7-ios_rule_script
 jobs:
   repo-sync:
     env:
@@ -19,8 +18,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync blackmatrix7-
-ios_rule_script
+      - name: sync blackmatrix7-ios_rule_script
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
